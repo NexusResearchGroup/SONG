@@ -1,0 +1,3378 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="HelpFileSONG1.0_files/filelist.xml">
+<link rel=Edit-Time-Data href="HelpFileSONG1.0_files/editdata.mso">
+<link rel=OLE-Object-Data href="HelpFileSONG1.0_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>SONG: Simulator of Network Growth 1</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Wenling Chen</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Wenling Chen</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>100</o:TotalTime>
+  <o:LastPrinted>2004-02-24T18:38:00Z</o:LastPrinted>
+  <o:Created>2004-03-26T00:01:00Z</o:Created>
+  <o:LastSaved>2004-03-26T00:01:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>3912</o:Words>
+  <o:Characters>22301</o:Characters>
+  <o:Company>UMN</o:Company>
+  <o:Lines>185</o:Lines>
+  <o:Paragraphs>52</o:Paragraphs>
+  <o:CharactersWithSpaces>26161</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-variant:small-caps;
+	mso-fareast-language:EN-US;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-noshow:yes;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 207.65pt right 415.3pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;}
+span.MsoFootnoteReference
+	{mso-style-noshow:yes;
+	vertical-align:super;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-indent:.5in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.Heading1, li.Heading1, div.Heading1
+	{mso-style-name:Heading1;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-even-footer:url("HelpFileSONG1.0_files/header.htm") ef1;
+	mso-footer:url("HelpFileSONG1.0_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-columns:2 not-even 207.95pt 35.4pt 207.95pt;
+	mso-even-footer:url("HelpFileSONG1.0_files/header.htm") ef1;
+	mso-footer:url("HelpFileSONG1.0_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-even-footer:url("HelpFileSONG1.0_files/header.htm") ef1;
+	mso-footer:url("HelpFileSONG1.0_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section3
+	{page:Section3;}
+@page Section4
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-columns:2 not-even 207.95pt 35.4pt 207.95pt;
+	mso-even-footer:url("HelpFileSONG1.0_files/header.htm") ef1;
+	mso-footer:url("HelpFileSONG1.0_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section4
+	{page:Section4;}
+@page Section5
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-even-footer:url("HelpFileSONG1.0_files/header.htm") ef1;
+	mso-footer:url("HelpFileSONG1.0_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section5
+	{page:Section5;}
+@page Section6
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-columns:2 not-even 207.95pt 35.4pt 207.95pt;
+	mso-even-footer:url("HelpFileSONG1.0_files/header.htm") ef1;
+	mso-footer:url("HelpFileSONG1.0_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section6
+	{page:Section6;}
+@page Section7
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-even-footer:url("HelpFileSONG1.0_files/header.htm") ef1;
+	mso-footer:url("HelpFileSONG1.0_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section7
+	{page:Section7;}
+@page Section8
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-columns:2 not-even 207.95pt 35.4pt 207.95pt;
+	mso-even-footer:url("HelpFileSONG1.0_files/header.htm") ef1;
+	mso-footer:url("HelpFileSONG1.0_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section8
+	{page:Section8;}
+@page Section9
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-even-footer:url("HelpFileSONG1.0_files/header.htm") ef1;
+	mso-footer:url("HelpFileSONG1.0_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section9
+	{page:Section9;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:157505620;
+	mso-list-template-ids:525994194;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:208300662;
+	mso-list-template-ids:525994194;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:519316930;
+	mso-list-type:hybrid;
+	mso-list-template-ids:298733764 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:554194243;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-144964182 67698703 67698703 67698693 67698691 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l3:level2
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l4
+	{mso-list-id:786316945;
+	mso-list-type:hybrid;
+	mso-list-template-ids:342533570 67698689 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l5
+	{mso-list-id:967859454;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1818475830 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:1127089480;
+	mso-list-template-ids:-1901420184;}
+@list l6:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l6:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l6:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l6:level4
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l6:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l6:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:right;
+	margin-left:2.75in;
+	text-indent:-9.0pt;}
+@list l6:level7
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l6:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l6:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.25in;
+	mso-level-number-position:right;
+	margin-left:4.25in;
+	text-indent:-9.0pt;}
+@list l7
+	{mso-list-id:1131749528;
+	mso-list-type:hybrid;
+	mso-list-template-ids:761266550 67698689 67698689 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:-.25in;
+	mso-level-number-position:left;
+	margin-left:-.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:right;
+	margin-left:.25in;
+	text-indent:-9.0pt;}
+@list l8
+	{mso-list-id:1248272353;
+	mso-list-template-ids:525994194;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l8:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l8:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l8:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l8:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l8:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l8:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l9
+	{mso-list-id:1311057166;
+	mso-list-type:hybrid;
+	mso-list-template-ids:525994194 67698689 67698691 67698693 67698691 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l9:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l9:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l10
+	{mso-list-id:1447116866;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-757958276 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11
+	{mso-list-id:1457598637;
+	mso-list-type:hybrid;
+	mso-list-template-ids:578042134 -1399955226 67698689 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l11:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:-.25in;
+	mso-level-number-position:left;
+	margin-left:-.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:right;
+	margin-left:.25in;
+	text-indent:-9.0pt;}
+@list l12
+	{mso-list-id:1591238955;
+	mso-list-type:hybrid;
+	mso-list-template-ids:98614340 2027743980 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l12:level1
+	{mso-level-start-at:2;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13
+	{mso-list-id:1723209677;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1203075328 -1399955226 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l13:level1
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:1.5in;
+	text-indent:-.25in;}
+@list l13:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l13:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l14
+	{mso-list-id:1984961153;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-368125990 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:2.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l14:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	margin-left:3.5in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal><a name=Top></a><a name="_top"></a><b style='mso-bidi-font-weight:
+normal'><span style='font-size:16.0pt'>SONG: Simulator of Network Growth 1.0—Help
+file<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><a
+href="#Introduction">Introduction</a><o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><a href="#Simulation">Simulation
+Models</a><o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><a href="#Interface">Interface</a><o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><a href="#Parameters">Parameters
+List</a><o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><a href="#Statistics">Statistics
+Outputs</a><o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><a
+href="#Instructions">User Instructions</a><o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><a href="#FAQs">FAQs</a></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Click <b style='mso-bidi-font-weight:normal'><u><span
+style='color:blue'><a href="HelpFileSONG1.0.pdf">here</a></span></u></b> for a
+PDF version of this file. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><a name=Introduction><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'>Introduction<o:p></o:p></span></b></a></p>
+
+<span style='mso-bookmark:Introduction'></span>
+
+<p class=Heading1>-----------</p>
+
+<p class=MsoNormal>SONG 1.0 is a simulator designed for simulating the process
+of transportation network growth. The growth or decline of transportation
+networks is normally treated as the result of top-down decision making in the
+long-range planning efforts of metropolitan planning organizations (MPOs).<span
+style='mso-spacerun:yes'>&nbsp; </span>However, changes to transportation
+networks are essentially the results of numerous small decisions by property
+owners, firms, developers, towns, cities, counties, state department of
+transportation districts, MPOs, and states in response to market conditions and
+policy initiatives. These system behaviors demonstrate the characteristics of decentralized
+systems, where organized patterns and structures can emerge not because of
+centralized control, but because of the interactions among decentralized system
+components. <span style='mso-spacerun:yes'>&nbsp;</span>This phenomenon of
+decentralization and self-organization occurs in many circumstances, such as
+bird flocks, ant colonies, life evolutions, neural networks. Increasingly research
+is applying decentralized models in different domains as a new way of viewing
+the world. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In SONG 1.0, transportation networks are treated as
+decentralized systems that demonstrate self-organizing patterns. By design, the
+simulator models behavior of individual system components and small decisions, and
+then demonstrates the patterns resulting from interactions of component models.
+<span style='mso-spacerun:yes'>&nbsp;</span>The idea is that it is the actions
+of the components, not the whole that are controlled by the designer; the
+resulting patterns or structures, which often behave very differently than the
+elements that compose them, are not designed.<span
+style='mso-spacerun:yes'>&nbsp; </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>It is worth to notice that SONG 1.0 shows a different kind
+of simulation, called “soft simulation”, which “provides qualitative
+understanding of a complex system by constructing a simple one that shares the
+same principle (Papert, 1992).” <span style='mso-spacerun:yes'>&nbsp;</span>By developing
+the simulator, the focus is not on perfect reproductions of the real world, but
+rather to help people explore the “microworld” of transportation network
+systems and to stimulate new ways of thinking about the network growth process.
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><a href="#_top">Top</a></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<p class=Heading1><a name=Simulation><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'>Simulation</span></b></a><b style='mso-bidi-font-weight:
+normal'><span style='font-size:14.0pt'> Models<o:p></o:p></span></b></p>
+
+<p class=Heading1>-----------</p>
+
+<p class=MsoNormal>SONG 1.0 simulates behaviors of individual links to explore
+the patterns of resulting network forms. In particular, each link is treated as
+autonomous agent and the simulation models individual link behaviors based on
+certain rules that determine link revenue, costs and investment decision. The
+model flowchart in Figure 1 provides a global view of the model structure;
+detailed descriptions of components models are followed after the flowchart. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Figure 1: Simulation flowchart</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:326.4pt;
+ height:340.2pt' o:ole="" o:bordertopcolor="this" o:borderleftcolor="this"
+ o:borderbottomcolor="this" o:borderrightcolor="this">
+ <v:imagedata src="HelpFileSONG1.0_files/image001.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=435 height=454
+src="HelpFileSONG1.0_files/image002.gif" v:shapes="_x0000_i1025"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Visio.Drawing.6" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1141742844">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>1. Land Use and Network Settings<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>The land use and network are treated as initial conditions
+input into the model. The land use is modeled as a layer of a grid of land
+blocks called land use cells. Transportation networks are modeled as directed
+graphs overlaying a land user layer. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The main objective of setting initial land use is to provide
+input to transportation models. Information contained in the land use layer
+includes: location, population density, and market density. It is assumed in
+the simulation model that trips produced from a land use cell are directly
+proportional to population density and trips attracted to a land use cell are
+directly proportional to market density.<span style='mso-spacerun:yes'>&nbsp;
+</span>The model considers three land use patterns:<span
+style='mso-spacerun:yes'>&nbsp; </span>(1) random initial land use, where trips
+produced and attracted are randomly distributed; (2) uniform initial land use,
+where trips are uniformed distributed, and it is a conceptual condition
+designed to control the effect of land use on the formation of network; and (3)
+bell-shaped land use, which is designed to replicate the distribution of land
+use patterns with a Central Business District (CBD). <span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><o:p></o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>The transportation network is represented as a directed
+graph that connects nodes with directional arcs, links. The simulator applies a
+grid network structure. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>2. Travel Demand Model<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>The travel demand model converts land use information
+(population and employment data) into link flows on a given transportation
+network through trip generation, trip distribution and route assignment models.
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The trip generation model divides geographical area into
+zones centered on network nodes and converts land use properties of the zones
+into trips produced and attracted. The land use layer is modeled as a square,
+and it is assumed that the land use layer is static throughout the
+simulation.<span style='mso-spacerun:yes'>&nbsp; </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The trip distribution model matches the generated trips by
+purpose between origin (O) and destination (D). Trips produced are differentiated
+according to destination; trips attracted to a zone are differentiated
+according to origins.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>The
+traffic assignment model predicts the travelers’ choices of routes by the
+relationship between flow and travel time. In particular, it converts the OD
+matrix, from the trip distribution step, into flows on the links depending on
+the way travelers choose routes.<span style='mso-spacerun:yes'>&nbsp; </span>By
+assumption, every traveler tries to optimize his travel time by choosing the
+quickest route to reach the destination. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>3. Revenue Model<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>The network revenue model determines the revenue road
+providers can collect by providing the road services, depending on link speed,
+flow, and length. (From travelers’ perspective, it is the toll they pay for
+using the road.) <span style='mso-spacerun:yes'>&nbsp;</span>The revenue model
+is a link-based model that calculates revenue for each link.<span
+style='mso-spacerun:yes'>&nbsp; </span>Revenue is calculated by multiplying the
+toll and flow. Therefore, the higher the flow on the link, the higher is the
+revenue.<span style='mso-spacerun:yes'>&nbsp; </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+ style='width:112.8pt;height:19.2pt' o:ole="" fillcolor="window">
+ <v:imagedata src="HelpFileSONG1.0_files/image003.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=150 height=26
+src="HelpFileSONG1.0_files/image004.gif" v:shapes="_x0000_i1026"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1141742845">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>4. Cost Model<o:p></o:p></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+tab-stops:.5in 1.0in 1.5in 2.0in 2.5in center 3.0in left 3.5in 4.0in right 6.0in'>This
+model calculates the cost that is required to keep a link in its present usable
+condition depending on the flow, speed, and length.</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+tab-stops:.5in 1.0in 1.5in 2.0in 2.5in center 3.0in left 3.5in 4.0in right 6.0in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:133.8pt;height:19.2pt' o:ole="" fillcolor="window">
+ <v:imagedata src="HelpFileSONG1.0_files/image005.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=178 height=26
+src="HelpFileSONG1.0_files/image006.gif" v:shapes="_x0000_i1027"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1141742846">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+tab-stops:.5in 1.0in 1.5in 2.0in 2.5in center 3.0in left 3.5in 4.0in right 6.0in'>where,<span
+style='mso-tab-count:1'> </span><i style='mso-bidi-font-style:normal'>C<sup>i</sup><sub>a</sub></i><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>is the cost of maintaining the
+road at its present condition,<o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+tab-stops:.5in 1.0in 1.5in 2.0in 2.5in center 3.0in left 3.5in 4.0in right 6.0in'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><i
+style='mso-bidi-font-style:normal'><span style='font-family:Symbol'>m</span></i>
+is the (annual) unit cost of maintenance for a link, <o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+tab-stops:.5in 1.0in 1.5in 2.0in 2.5in center 3.0in left 3.5in 4.0in right 6.0in'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><i
+style='mso-bidi-font-style:normal'><span style='font-family:Symbol;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;
+mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Symbol'>a</span></span><sub>1</sub></i>, <i style='mso-bidi-font-style:normal'><span
+style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>a</span></span><sub>2</sub></i>,
+<i style='mso-bidi-font-style:normal'><span style='font-family:Symbol;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Symbol'>a</span></span><sub>3</sub></i> are
+coefficients indicating economies or diseconomies of scale</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>5. Investment Model<o:p></o:p></i></b></p>
+
+<p class=MsoBodyText style='text-align:justify;text-justify:inter-ideograph;
+text-indent:0in;tab-stops:.5in 1.0in 1.5in 2.0in 2.5in center 3.0in left 3.5in 4.0in right 6.0in'><span
+style='mso-bidi-font-size:12.0pt'>Depending on the available revenue, and
+maintenance costs link changes its speed.<span style='mso-spacerun:yes'>&nbsp;
+</span>If the revenue generated by a link is insufficient to meet its maintenance
+requirements its speed drops.<span style='mso-spacerun:yes'>&nbsp; </span>If
+the link has revenue left after maintenance it invests that remaining amount in
+capital improvements, increasing its speed. A major assumption in this model is
+that a link uses all the available revenue in a time step without saving for
+the next time step.<span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1028" type="#_x0000_t75"
+ style='width:85.2pt;height:34.2pt' o:ole="" fillcolor="window">
+ <v:imagedata src="HelpFileSONG1.0_files/image007.wmz" o:althref="HelpFileSONG1.0_files/image008.pcz"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=114 height=46
+src="HelpFileSONG1.0_files/image009.gif" v:shapes="_x0000_i1028"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1141742847">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>With the new speed on the links the travel time changes and
+the whole process from the travel demand model is repeated to grow the
+transportation network.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><a href="#_top">Top</a><o:p></o:p></p>
+
+<p class=Heading1><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=Heading1><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<p class=Heading1><a name=Parameters></a><a name=Interface><span
+style='mso-bookmark:Parameters'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'>Interface</span></b></span></a><span style='mso-bookmark:
+Parameters'><b style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt'><o:p></o:p></span></b></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>As shown in Figure 2, the
+Interface of SONG 1.0 contains three portions of information: the parameter
+panel, the visualization panel, and the output panel. </span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>Figure 2: Interface of
+SONG 1.0</span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1029"
+ type="#_x0000_t75" style='width:422.4pt;height:317.4pt' o:bordertopcolor="this"
+ o:borderleftcolor="this" o:borderbottomcolor="this" o:borderrightcolor="this">
+ <v:imagedata src="HelpFileSONG1.0_files/image010.png" o:title=""/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=565 height=425
+src="HelpFileSONG1.0_files/image011.jpg" v:shapes="_x0000_i1029"><![endif]><o:p></o:p></span></b></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><b style='mso-bidi-font-weight:
+normal'>1. Parameter panel<o:p></o:p></b></span></p>
+
+</div>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='page-break-before:auto;mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>The parameter panel is
+located in the left side of the interface. It is where users can make changes
+to the values of certain variables and see the consequences on the network
+form. In doing so, users are able to examine the implications of alternative
+policies as represented by different values of the parameters. </span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>The parameters shown on
+the interface include network types, speed, land use distributions, and sets of
+parameters contained in the component models for simulating travel demand,
+revenue, cost, and investment behaviors. Detailed description of each parameter
+will be provided in “parameters” section of this file. </span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1 style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bookmark:Parameters'><span
+style='mso-spacerun:yes'>&nbsp;</span>Figure 3: Parameter Panel of SONG 1.0</span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1030" type="#_x0000_t75" style='width:123.6pt;height:241.2pt'
+ o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+ o:borderrightcolor="this">
+ <v:imagedata src="HelpFileSONG1.0_files/image012.png" o:title=""/>
+ <w:bordertop type="single" width="12"/>
+ <w:borderleft type="single" width="12"/>
+ <w:borderbottom type="single" width="12"/>
+ <w:borderright type="single" width="12"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=168 height=325
+src="HelpFileSONG1.0_files/image013.jpg" v:shapes="_x0000_i1030"><![endif]></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:auto;mso-break-type:section-break'>
+</span></b>
+
+<div class=Section3>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><b style='mso-bidi-font-weight:
+normal'>2. Visualization panel<o:p></o:p></b></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>The simulator is
+designed to visualize network forms based on either different link flows or
+different link speeds. Visualization of the simulation is demonstrated on the
+right hand side of the interface, including the graph output, legend, running
+button, and status information. <span style='mso-spacerun:yes'>&nbsp;</span></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>Figure 4: Visualization
+panel of SONG 1.0</span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:341.4pt;height:244.8pt'>
+ <v:imagedata src="HelpFileSONG1.0_files/image014.emz" o:title=""/>
+ <w:bordertop type="single" width="4"/>
+ <w:borderleft type="single" width="4"/>
+ <w:borderbottom type="single" width="4"/>
+ <w:borderright type="single" width="4"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=457 height=328
+src="HelpFileSONG1.0_files/image015.gif" v:shapes="_x0000_i1031"><![endif]></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1 style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo15;
+tab-stops:list .25in'><span style='mso-bookmark:Parameters'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Graphic output</span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>Graphic output is shown
+on the grid network graph with different colors and thickness on each link
+representing different link speed or link flow. </span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1 style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo15;
+tab-stops:list .25in'><span style='mso-bookmark:Parameters'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Legend</span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>Different link flows
+and different link speeds of the network are represented with different colors
+of the links. In particular, the simulator follows the Red, Orange, Yellow,
+Green, Blue, Indigo, and Violet<span style='mso-spacerun:yes'>&nbsp; </span>(ROYGBIV)
+spectrum with “Red” representing the highest speed or flow and “Blue”
+representing lowest values in speed or flow. The particular value of speed or
+flow for each color is indicated in the legend below the graph panel. </span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1 style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo15;
+tab-stops:list .25in'><span style='mso-bookmark:Parameters'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Running button and status information</span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>To run the simulation,
+users need to hit “evolve” button, and the running status will be displayed
+below the legend indicating the model running status. The simulation process
+stops either when equilibrium is reached, or when it reaches its 20<sup>th</sup>
+iteration</span><a style='mso-footnote-id:ftn1' href="#_ftn1" name="_ftnref1"
+title=""><span style='mso-bookmark:Parameters'><span
+class=MsoFootnoteReference><span style='mso-special-character:footnote'><![if !supportFootnotes]><span
+class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA'>[1]</span></span><![endif]></span></span></span></a><span
+style='mso-bookmark:Parameters'>. </span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><b style='mso-bidi-font-weight:
+normal'>3. Output panel<o:p></o:p></b></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>The output panel is
+located on the lower right hand side of the interface. It includes the following
+information: </span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1 style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo15;
+tab-stops:list .25in'><span style='mso-bookmark:Parameters'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Speed and volume scroll down options </span></p>
+
+<p class=Heading1 style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo15;
+tab-stops:list .25in'><span style='mso-bookmark:Parameters'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Iteration period </span></p>
+
+<p class=Heading1 style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo15;
+tab-stops:list .25in'><span style='mso-bookmark:Parameters'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Statistics button for MOEs output</span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>Figure 5: Output panel
+of SONG 1.0</span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:487.8pt;height:.6pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image016.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=650 height=1
+src="HelpFileSONG1.0_files/image017.gif" v:shapes="_x0000_i1032"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Photoshop.Image.7" ShapeID="_x0000_i1032"
+  DrawAspect="Content" ObjectID="_1141742848">
+  <o:WordFieldCodes>\s</o:WordFieldCodes>
+ </o:OLEObject>
+</xml><![endif]--><!--[if gte vml 1]><v:shape id="_x0000_i1033" type="#_x0000_t75"
+ style='width:329.4pt;height:19.8pt' o:bordertopcolor="this" o:borderleftcolor="this"
+ o:borderbottomcolor="this" o:borderrightcolor="this" filled="t" fillcolor="silver">
+ <v:fill opacity="59638f"/>
+ <v:imagedata src="HelpFileSONG1.0_files/image018.png" o:title=""/>
+ <w:bordertop type="single" width="4"/>
+ <w:borderleft type="single" width="4"/>
+ <w:borderbottom type="single" width="4"/>
+ <w:borderright type="single" width="4"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=441 height=28
+src="HelpFileSONG1.0_files/image019.gif" v:shapes="_x0000_i1033"><![endif]></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'>Figure 6: MOEs output
+window</span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:195pt;height:487.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image020.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=260 height=650
+src="HelpFileSONG1.0_files/image021.gif" v:shapes="_x0000_i1034"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Photoshop.Image.7" ShapeID="_x0000_i1034"
+  DrawAspect="Content" ObjectID="_1141742849">
+  <o:WordFieldCodes>\s</o:WordFieldCodes>
+ </o:OLEObject>
+</xml><![endif]--></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'></span><a href="#_top"><span
+style='mso-bookmark:Parameters'>Top</span><span style='mso-bookmark:Parameters'></span></a><span
+style='mso-bookmark:Parameters'></span></p>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><o:p>&nbsp;</o:p></span></p>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=Heading1><span style='mso-bookmark:Parameters'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:14.0pt'>Parameters</span></b></span><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt'> List</span><i
+style='mso-bidi-font-style:normal'><o:p></o:p></i></b></p>
+
+<p class=MsoNormal>-----------</p>
+
+</div>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='page-break-before:auto;mso-break-type:section-break'>
+</span>
+
+<div class=Section4>
+
+<p class=MsoNormal>SONG 1.0 contains a set of variables that allow users to
+make adjustments. These include <i style='mso-bidi-font-style:normal'>initial network
+types, network speed distribution, land use distribution </i>and some <i
+style='mso-bidi-font-style:normal'>model parameters</i>. Figure 2 shows the interface
+of SONG 1.0 where users can adjust the parameters. A brief description of the
+variable default values, range, and real world interpretation is given in Table
+1. Additionally, the full list of underlying model parameters (including those
+that are not shown in the interface) are also explained in this document. <span
+style='mso-spacerun:yes'>&nbsp;</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal>Figure 2: Parameter panel of SONG 1.0</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1035" type="#_x0000_t75"
+ style='width:104.4pt;height:177pt' o:bordertopcolor="this" o:borderleftcolor="this"
+ o:borderbottomcolor="this" o:borderrightcolor="this">
+ <v:imagedata src="HelpFileSONG1.0_files/image012.png" o:title=""/>
+ <w:bordertop type="single" width="12"/>
+ <w:borderleft type="single" width="12"/>
+ <w:borderbottom type="single" width="12"/>
+ <w:borderright type="single" width="12"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=142 height=239
+src="HelpFileSONG1.0_files/image022.jpg" v:shapes="_x0000_i1035"><![endif]></p>
+
+</div>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='page-break-before:auto;mso-break-type:section-break'>
+</span>
+
+<div class=Section5>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Table 1: SONG 1.0 Variable Table </p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=743
+ style='width:446.0pt;margin-left:5.4pt;border-collapse:collapse;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;height:12.0pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border-top:solid black 1.5pt;
+  border-left:none;border-bottom:double windowtext 2.25pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:12.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><i><span
+  style='font-size:8.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></i></b></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border-top:solid black 1.5pt;
+  border-left:none;border-bottom:double windowtext 2.25pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:12.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:Arial'>Variable<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ID<o:p></o:p></span></b></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border-top:solid black 1.5pt;
+  border-left:none;border-bottom:double windowtext 2.25pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:12.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:Arial'>Default value<o:p></o:p></span></b></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border-top:solid black 1.5pt;
+  border-left:none;border-bottom:double windowtext 2.25pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:12.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:Arial'>Adjustable Range<o:p></o:p></span></b></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border-top:solid black 1.5pt;
+  border-left:none;border-bottom:double windowtext 2.25pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt;height:12.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:8.0pt;font-family:Arial'>Interpretation<sup>a</sup><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:.15in'>
+  <td width=234 nowrap colspan=2 valign=bottom style='width:140.6pt;padding:
+  0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><b><span style='font-size:8.0pt;font-family:Arial'>Land
+  use, network settings<o:p></o:p></span></b></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Network
+  types<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>10x10<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>5x5~25x25<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>network
+  sizes<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>network
+  with river<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-top:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Speed
+  distribution<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-top:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>1<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-top:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>uniform<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-top:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>uniform<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-top:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>no
+  differentiation in link speeds cross the network<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>random<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>randomly
+  distribute speed<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>prespecified
+  random<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>repeat the
+  &quot;same&quot; random distribution<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Speed
+  multiplier<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>100%<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>20% - 220%<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>network
+  speed level<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-top:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Land
+  use distribution<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-top:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>2<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-top:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>uniform<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-top:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>uniform<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-top:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>random<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>urban<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>land use
+  with downtown<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>prespecified
+  random<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>repeat the
+  &quot;same&quot; random distribution<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;height:.15in'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Land
+  use multiplier<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>100%<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>20% - 220%<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>land use
+  density<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><b><span style='font-size:8.0pt;font-family:Arial'>Travel
+  Demand<o:p></o:p></span></b></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Value
+  of time<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>5.1<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>1.0<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0 - 5.0<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>hourly
+  time value<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;height:15.6pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.6pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Friction
+  Factor<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.6pt'>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1494" type="#_x0000_t75"
+   style='position:absolute;margin-left:21.9pt;margin-top:7.25pt;width:12pt;
+   height:11pt;z-index:1;mso-position-horizontal-relative:text;
+   mso-position-vertical-relative:text' filled="t">
+   <v:imagedata src="HelpFileSONG1.0_files/image023.wmz" o:title=""/>
+  </v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Equation.3"
+   ShapeID="_x0000_s1494" DrawAspect="Content" ObjectID="_1141742850">
+  </o:OLEObject>
+ <![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+  absolute;z-index:1;margin-left:29px;margin-top:9px;width:16px;height:15px'><img
+  width=16 height=15 src="HelpFileSONG1.0_files/image024.gif" v:shapes="_x0000_s1494"></span><![endif]><span
+  style='font-size:8.0pt;font-family:Arial'><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>5.2<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.6pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0.01<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.6pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0 - 1.0<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.6pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>willingness
+  to travel<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><b><span style='font-size:8.0pt;font-family:Arial'>Revenue<o:p></o:p></span></b></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Toll
+  rate<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1495" type="#_x0000_t75"
+   style='position:absolute;margin-left:22.75pt;margin-top:3.45pt;width:10.25pt;
+   height:13.2pt;z-index:2;mso-position-horizontal-relative:text;
+   mso-position-vertical-relative:text'>
+   <v:imagedata src="HelpFileSONG1.0_files/image025.wmz" o:title=""/>
+  </v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Equation.3"
+   ShapeID="_x0000_s1495" DrawAspect="Content" ObjectID="_1141742851">
+  </o:OLEObject>
+ <![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+  absolute;z-index:2;margin-left:30px;margin-top:4px;width:14px;height:18px'><img
+  width=14 height=18 src="HelpFileSONG1.0_files/image026.gif" v:shapes="_x0000_s1495"></span><![endif]><span
+  style='font-size:8.0pt;font-family:Arial'><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>6.1<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>1.0<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0.5 - 1.5<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>toll<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></i></p>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Length
+  coefficient<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1496" type="#_x0000_t75"
+   style='position:absolute;margin-left:23.05pt;margin-top:3.75pt;width:9.2pt;
+   height:12pt;z-index:4;mso-position-horizontal-relative:text;
+   mso-position-vertical-relative:text' filled="t">
+   <v:imagedata src="HelpFileSONG1.0_files/image027.wmz" o:title=""/>
+  </v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Equation.3"
+   ShapeID="_x0000_s1496" DrawAspect="Content" ObjectID="_1141742852">
+  </o:OLEObject>
+ <![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+  absolute;z-index:4;margin-left:30px;margin-top:5px;width:13px;height:16px'><img
+  width=13 height=16 src="HelpFileSONG1.0_files/image028.gif" v:shapes="_x0000_s1496"></span><![endif]><span
+  style='font-size:8.0pt;font-family:Arial'><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>6.2<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>1.0<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0 - 1.5<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>revenue
+  responsiveness to distance traveled<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;height:16.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:16.2pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Speed
+  coefficient<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:16.2pt'>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1497" type="#_x0000_t75"
+   style='position:absolute;margin-left:23.45pt;margin-top:5pt;width:9.95pt;
+   height:12.8pt;z-index:3;mso-position-horizontal-relative:text;
+   mso-position-vertical-relative:text' filled="t">
+   <v:imagedata src="HelpFileSONG1.0_files/image029.wmz" o:title=""/>
+  </v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Equation.3"
+   ShapeID="_x0000_s1497" DrawAspect="Content" ObjectID="_1141742853">
+  </o:OLEObject>
+ <![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+  absolute;z-index:3;margin-left:31px;margin-top:6px;width:14px;height:17px'><img
+  width=14 height=17 src="HelpFileSONG1.0_files/image030.gif" v:shapes="_x0000_s1497"></span><![endif]><span
+  style='font-size:8.0pt;font-family:Arial'><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>6.3<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:16.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0.0<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:16.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0 - 1<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:16.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>revenue
+  responsiveness to road speeds<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><b><span style='font-size:8.0pt;font-family:Arial'>Link
+  Maintenance Cost<o:p></o:p></span></b></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;height:24.0pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.0pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Length
+  coefficient<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1498" type="#_x0000_t75"
+   style='position:absolute;margin-left:22.6pt;margin-top:.45pt;width:9pt;
+   height:11.7pt;z-index:5' filled="t">
+   <v:imagedata src="HelpFileSONG1.0_files/image031.wmz" o:title=""/>
+  </v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Equation.3"
+   ShapeID="_x0000_s1498" DrawAspect="Content" ObjectID="_1141742854">
+  </o:OLEObject>
+ <![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+  absolute;z-index:5;margin-left:30px;margin-top:0px;width:12px;height:16px'><img
+  width=12 height=16 src="HelpFileSONG1.0_files/image032.gif" v:shapes="_x0000_s1498"></span><![endif]><span
+  style='font-size:8.0pt;font-family:Arial'>7.1<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>1.0<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0 - 1.2<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>elasticity
+  of cost in response to road length<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22;height:21.0pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:21.0pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Flow
+  coefficient<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:21.0pt'>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1499" type="#_x0000_t75"
+   style='position:absolute;margin-left:23.2pt;margin-top:6.25pt;width:9.8pt;
+   height:11.95pt;z-index:6;mso-position-horizontal-relative:text;
+   mso-position-vertical-relative:text' filled="t">
+   <v:imagedata src="HelpFileSONG1.0_files/image033.wmz" o:title=""/>
+  </v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Equation.3"
+   ShapeID="_x0000_s1499" DrawAspect="Content" ObjectID="_1141742855">
+  </o:OLEObject>
+ <![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+  absolute;z-index:6;margin-left:31px;margin-top:8px;width:13px;height:16px'><img
+  width=13 height=16 src="HelpFileSONG1.0_files/image034.gif" v:shapes="_x0000_s1499"></span><![endif]><span
+  style='font-size:8.0pt;font-family:Arial'><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>7.2<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:21.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0.75<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:21.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0 - 1.2<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:21.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>elasticity
+  of cost in response to link flow<span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23;height:.15in'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Speed
+  coefficient<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1500" type="#_x0000_t75"
+   style='position:absolute;margin-left:23.2pt;margin-top:4.75pt;width:9.65pt;
+   height:12.45pt;z-index:7' filled="t">
+   <v:imagedata src="HelpFileSONG1.0_files/image035.wmz" o:title=""/>
+  </v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Equation.3"
+   ShapeID="_x0000_s1500" DrawAspect="Content" ObjectID="_1141742856">
+  </o:OLEObject>
+ <![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0 align=left>
+   <tr>
+    <td width=31 height=6></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=13 height=17 src="HelpFileSONG1.0_files/image036.gif"
+    v:shapes="_x0000_s1500"></td>
+   </tr>
+  </table>
+  </span><![endif]><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <br style='mso-ignore:vglayout' clear=ALL>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>7.3<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0.75<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0 - 1.2<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:.15in'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>elasticity
+  of cost in response to road speed level<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24;height:10.2pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><b><span style='font-size:8.0pt;font-family:Arial'>Investment<o:p></o:p></span></b></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10.2pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25;mso-yfti-lastrow:yes;height:21.0pt'>
+  <td width=166 nowrap valign=bottom style='width:99.8pt;border:none;
+  border-bottom:solid black 1.5pt;padding:0in 5.4pt 0in 5.4pt;height:21.0pt'>
+  <p class=MsoNormal><i><span style='font-size:8.0pt;font-family:Arial'>Speed
+  improvement factor<o:p></o:p></span></i></p>
+  </td>
+  <td width=68 nowrap valign=bottom style='width:40.8pt;border:none;border-bottom:
+  solid black 1.5pt;padding:0in 5.4pt 0in 5.4pt;height:21.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1501" type="#_x0000_t75"
+   style='position:absolute;margin-left:24.6pt;margin-top:2.35pt;width:9pt;
+   height:13.2pt;z-index:8' filled="t">
+   <v:imagedata src="HelpFileSONG1.0_files/image037.wmz" o:title=""/>
+  </v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Equation.3"
+   ShapeID="_x0000_s1501" DrawAspect="Content" ObjectID="_1141742858">
+  </o:OLEObject>
+ <![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0 align=left>
+   <tr>
+    <td width=33 height=3></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=12 height=18 src="HelpFileSONG1.0_files/image038.gif"
+    v:shapes="_x0000_s1501"></td>
+   </tr>
+  </table>
+  </span><![endif]><span style='font-size:8.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <br style='mso-ignore:vglayout' clear=ALL>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>8.1<o:p></o:p></span></p>
+  </td>
+  <td width=93 nowrap valign=bottom style='width:55.8pt;border:none;border-bottom:
+  solid black 1.5pt;padding:0in 5.4pt 0in 5.4pt;height:21.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>1.0<o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:74.8pt;border:none;
+  border-bottom:solid black 1.5pt;padding:0in 5.4pt 0in 5.4pt;height:21.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>0 - 1<o:p></o:p></span></p>
+  </td>
+  <td width=291 valign=bottom style='width:174.8pt;border:none;border-bottom:
+  solid black 1.5pt;padding:0in 5.4pt 0in 5.4pt;height:21.0pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:Arial'>responsiveness
+  of link improvement (investment) to link performance (such as revenue/cost
+  ratio)<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><sup>a</sup> Detailed variable interpretations can also be
+found from the model variable description below. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><u>Initial Network Types, Speed
+Distribution, and Land Use Distribution<o:p></o:p></u></i></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:auto;mso-break-type:section-break'>
+</span></b>
+
+<div class=Section6>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>1.<i
+style='mso-bidi-font-style:normal'> </i>Network types</b><i style='mso-bidi-font-style:
+normal'> </i>include options representing different sizes and types of
+networks, e.g. users can choose grid networks with varying sizes from 5x5 to
+25x25 as demonstrated in Figure 2; or network with a river crossing as
+demonstrated in Figure 7. <span style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal>Figure 7: Network with river crossing</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75"
+ style='width:97.8pt;height:88.8pt' o:bordertopcolor="this" o:borderleftcolor="this"
+ o:borderbottomcolor="this" o:borderrightcolor="this">
+ <v:imagedata src="HelpFileSONG1.0_files/image039.png" o:title=""/>
+ <w:bordertop type="single" width="4"/>
+ <w:borderleft type="single" width="4"/>
+ <w:borderbottom type="single" width="4"/>
+ <w:borderright type="single" width="4"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=132 height=120
+src="HelpFileSONG1.0_files/image040.jpg" v:shapes="_x0000_i1036"><![endif]></p>
+
+</div>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='page-break-before:auto;mso-break-type:section-break'>
+</span>
+
+<div class=Section7>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>2. Speed
+distributions </b>in the initial network can be set as random or uniform to see
+how different (or similar) the evolved network form can be compared to the
+initial one. <i style='mso-bidi-font-style:normal'>Uniform speed</i>
+distribution means link speeds are uniform across the network; <i
+style='mso-bidi-font-style:normal'>Random speed</i> distribution distributes
+the initial link speeds randomly across the network; and <i style='mso-bidi-font-style:
+normal'>Pre-specified random speed</i> distributes links speed randomly in a
+pre-specified way, so that users can control the effects of speed distribution
+and test the impacts of other variables. <i style='mso-bidi-font-style:normal'>Speed
+multiplier</i> allows users to adjust the level of speeds across the whole
+network. e.g. a value of 135% indicates the speed level is 135% of the default
+speed level. <o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>3. Land use
+distributions </b>at the initial stage of network development can be set as
+random, uniform, pre-specified random, or with a CBD (call urban land
+use).<span style='mso-spacerun:yes'>&nbsp; </span>The idea is to explore if
+orderly network structure can emerge from different initial land use
+conditions. <span style='mso-spacerun:yes'>&nbsp;</span>Additionally, a <i
+style='mso-bidi-font-style:normal'>land use multiplier</i> in the program
+allows users to adjust the level of initial land use density cross the whole
+network. <span style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></p>
+
+<p class=MsoNormal><span style='color:gray'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><u>Model parameters</u><o:p></o:p></i></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>Corresponding to the simulation components models, simulation
+parameters will be explained in this section. Note that not all of the parameters
+explained below are visible in the interface, the user adjustable variables, as
+shown in the interface, will be marked with “***” sign. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>1. Parameters from
+travel demand model<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>The models<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>User adjustable parameters are associated two models
+simulating how trips are distributed in the network.<span
+style='mso-spacerun:yes'>&nbsp; </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>(a) Gravity model: <sub><!--[if gte vml 1]><v:shape id="_x0000_i1037"
+ type="#_x0000_t75" style='width:67.2pt;height:34.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image041.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=90 height=46
+src="HelpFileSONG1.0_files/image042.gif" v:shapes="_x0000_i1037"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1037"
+  DrawAspect="Content" ObjectID="_1141742859">
+ </o:OLEObject>
+</xml><![endif]-->, where <sub><!--[if gte vml 1]><v:shape id="_x0000_i1038"
+ type="#_x0000_t75" style='width:12pt;height:10.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image043.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=16 height=14
+src="HelpFileSONG1.0_files/image044.gif" v:shapes="_x0000_i1038"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1038"
+  DrawAspect="Content" ObjectID="_1141742860">
+ </o:OLEObject>
+</xml><![endif]-->=<sub><!--[if gte vml 1]><v:shape id="_x0000_i1039" type="#_x0000_t75"
+ style='width:31.8pt;height:19.2pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image045.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=42 height=26
+src="HelpFileSONG1.0_files/image046.gif" v:shapes="_x0000_i1039"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1039"
+  DrawAspect="Content" ObjectID="_1141742861">
+ </o:OLEObject>
+</xml><![endif]-->is <i style='mso-bidi-font-style:normal'>friction factor</i>,
+indicating people’s willingness to travel, and <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1040" type="#_x0000_t75" style='width:16.2pt;height:19.2pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image047.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=22 height=26
+src="HelpFileSONG1.0_files/image048.gif" v:shapes="_x0000_i1040"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1040"
+  DrawAspect="Content" ObjectID="_1141742862">
+ </o:OLEObject>
+</xml><![endif]-->is the generalized cost of commuting between two locations;
+and</p>
+
+<p class=MsoNormal>(b) Generalized travel cost model:<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1041" type="#_x0000_t75" style='width:121.2pt;height:34.8pt'
+ o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image049.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=162 height=46
+src="HelpFileSONG1.0_files/image050.gif" v:shapes="_x0000_i1041"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1041"
+  DrawAspect="Content" ObjectID="_1141742863">
+ </o:OLEObject>
+</xml><![endif]-->, where costs of commute are generalized to consist of: <i
+style='mso-bidi-font-style:normal'>travel time in monetary value</i> and <i
+style='mso-bidi-font-style:normal'>toll (or user fees)</i>:<span
+style='mso-spacerun:yes'>&nbsp; </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>Description of parameters: <o:p></o:p></i></b></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1042" type="#_x0000_t75"
+ style='width:12pt;height:10.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image043.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=16 height=14
+src="HelpFileSONG1.0_files/image044.gif" v:shapes="_x0000_i1042"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1042"
+  DrawAspect="Content" ObjectID="_1141742864">
+ </o:OLEObject>
+</xml><![endif]-->, friction factor ***</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Default
+     value: 0.01</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Range:
+     0~1</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Real
+     world<i style='mso-bidi-font-style:normal'> </i>interpretation: w
+     represents the sensitivity of travel behavior to travel costs.<span
+     style='mso-spacerun:yes'>&nbsp;&nbsp; </span>In another word, w reflects
+     people’s willingness to travel.<span style='mso-spacerun:yes'>&nbsp;&nbsp;
+     </span>Particularly, A w of 0, means willingness to travel is independent
+     of travel costs; lower values of w (e.g. 0.02), represent a society where
+     longer trips are preferred; and higher values of <i style='mso-bidi-font-style:
+     normal'>w</i> (e.g. 0.9), represent areas where shorter trips are
+     preferred. </li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Value of time ***</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>default:
+     1.0 per unit time</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>range:
+     user define arbitrarily </li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Interpretation:
+     e.g. by default, value of time is $1.0 an hour. Value of time is assigned
+     to convert travel time into monetary value by multiplying it with travel
+     time. </li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>2. Parameters from revenue
+model <o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>The model: <o:p></o:p></i></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='mso-spacerun:yes'>&nbsp;</span>[<sub><!--[if gte vml 1]><v:shape id="_x0000_i1043"
+ type="#_x0000_t75" style='width:154.8pt;height:19.2pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image051.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=206 height=26
+src="HelpFileSONG1.0_files/image052.gif" v:shapes="_x0000_i1043"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1043"
+  DrawAspect="Content" ObjectID="_1141742865">
+ </o:OLEObject>
+</xml><![endif]-->]</b>, or its simplified version: [<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1044" type="#_x0000_t75" style='width:100.8pt;height:18pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image053.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=134 height=24
+src="HelpFileSONG1.0_files/image054.gif" v:shapes="_x0000_i1044"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1044"
+  DrawAspect="Content" ObjectID="_1141742866">
+ </o:OLEObject>
+</xml><![endif]-->], assuming no relationship (<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1045" type="#_x0000_t75" style='width:15pt;height:18pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image055.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=20 height=24
+src="HelpFileSONG1.0_files/image056.gif" v:shapes="_x0000_i1045"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1045"
+  DrawAspect="Content" ObjectID="_1141742867">
+ </o:OLEObject>
+</xml><![endif]-->=0) between revenue and speed, and linear relationship
+between link length and revenue (<sub><!--[if gte vml 1]><v:shape id="_x0000_i1046"
+ type="#_x0000_t75" style='width:13.8pt;height:16.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image057.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+src="HelpFileSONG1.0_files/image058.gif" v:shapes="_x0000_i1046"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1046"
+  DrawAspect="Content" ObjectID="_1141742868">
+ </o:OLEObject>
+</xml><![endif]-->=1)</p>
+
+<p class=MsoNormal style='margin-left:.75in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>From services providers’ perspective, toll paid by travelers
+equals to revenues made by the providers. So revenues are calculated in the
+same way that toll is calculated in the generalized travel cost model in the
+last section. Hence, parameters in the generalized cost model have the same
+values as defined in the revenue model here. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>Description of parameters:<o:p></o:p></i></b></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1047" type="#_x0000_t75"
+ style='width:12pt;height:13.2pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image059.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=16 height=18
+src="HelpFileSONG1.0_files/image060.gif" v:shapes="_x0000_i1047"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1047"
+  DrawAspect="Content" ObjectID="_1141742869">
+ </o:OLEObject>
+</xml><![endif]-->, a model parameter to scale flow annually (<i
+style='mso-bidi-font-style:normal'>not shown on the interface</i>)<o:p></o:p></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Default
+     value:<sub><!--[if gte vml 1]><v:shape id="_x0000_i1048" type="#_x0000_t75"
+      style='width:12pt;height:13.2pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image059.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=16 height=18
+     src="HelpFileSONG1.0_files/image060.gif" v:shapes="_x0000_i1048"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1048"
+       DrawAspect="Content" ObjectID="_1141742870">
+      </o:OLEObject>
+     </xml><![endif]-->=365</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Range:
+     hidden from user adjustment</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Interpretation:
+     the model applies<sub><!--[if gte vml 1]><v:shape id="_x0000_i1049"
+      type="#_x0000_t75" style='width:12pt;height:13.2pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image059.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=16 height=18
+     src="HelpFileSONG1.0_files/image060.gif" v:shapes="_x0000_i1049"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1049"
+       DrawAspect="Content" ObjectID="_1141742871">
+      </o:OLEObject>
+     </xml><![endif]--> to scale daily revenue into annual revenue. </li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1050" type="#_x0000_t75"
+ style='width:15pt;height:18pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image061.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=20 height=24
+src="HelpFileSONG1.0_files/image062.gif" v:shapes="_x0000_i1050"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1050"
+  DrawAspect="Content" ObjectID="_1141742872">
+ </o:OLEObject>
+</xml><![endif]-->, Tax (toll) rate ***<span style='mso-spacerun:yes'>&nbsp;
+</span><sub><!--[if gte vml 1]><v:shape id="_x0000_i1051" type="#_x0000_t75"
+ style='width:9pt;height:16.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image063.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=22
+src="HelpFileSONG1.0_files/image064.gif" v:shapes="_x0000_i1051"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1051"
+  DrawAspect="Content" ObjectID="_1141742873">
+ </o:OLEObject>
+</xml><![endif]--><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><o:p></o:p></i></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Default
+     value: 1.0</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Range:
+     user define between 0~10</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Interpretation:
+     tax rate determine how much tax providers charge travelers for traveling
+     on the road based on the distance traveled (link length,<sub><!--[if gte vml 1]><v:shape
+      id="_x0000_i1052" type="#_x0000_t75" style='width:10.8pt;height:18pt'
+      o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image065.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=14 height=24
+     src="HelpFileSONG1.0_files/image066.gif" v:shapes="_x0000_i1052"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1052"
+       DrawAspect="Content" ObjectID="_1141742874">
+      </o:OLEObject>
+     </xml><![endif]-->) and road speed or standard (link speed,<sub><!--[if gte vml 1]><v:shape
+      id="_x0000_i1053" type="#_x0000_t75" style='width:13.2pt;height:18pt'
+      o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image067.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=18 height=24
+     src="HelpFileSONG1.0_files/image068.gif" v:shapes="_x0000_i1053"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1053"
+       DrawAspect="Content" ObjectID="_1141742875">
+      </o:OLEObject>
+     </xml><![endif]-->). </li>
+</ul>
+
+<p class=MsoNormal style='margin-left:1.75in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1054" type="#_x0000_t75"
+ style='width:13.8pt;height:16.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image057.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+src="HelpFileSONG1.0_files/image058.gif" v:shapes="_x0000_i1054"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1054"
+  DrawAspect="Content" ObjectID="_1141742876">
+ </o:OLEObject>
+</xml><![endif]-->, Length power in revenue model ***</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Default
+     value:1.0</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Range:
+     Users define between 0~10, indicating economy or diseconomy of scale of
+     revenue regarding road distances provided for travelers. </li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Interpretation:
+     <sub><!--[if gte vml 1]><v:shape id="_x0000_i1055" type="#_x0000_t75"
+      style='width:13.8pt;height:16.8pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image057.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+     src="HelpFileSONG1.0_files/image058.gif" v:shapes="_x0000_i1055"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1055"
+       DrawAspect="Content" ObjectID="_1141742877">
+      </o:OLEObject>
+     </xml><![endif]-->=1.0 means one unit increase in link length generates
+     one unit of additional revenue; <sub><!--[if gte vml 1]><v:shape id="_x0000_i1056"
+      type="#_x0000_t75" style='width:13.8pt;height:16.8pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image057.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+     src="HelpFileSONG1.0_files/image058.gif" v:shapes="_x0000_i1056"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1056"
+       DrawAspect="Content" ObjectID="_1141742878">
+      </o:OLEObject>
+     </xml><![endif]-->&gt;1.0 means one unit increase in link length generates
+     more than one unit additional revenue; <sub><!--[if gte vml 1]><v:shape
+      id="_x0000_i1085" type="#_x0000_t75" style='width:13.8pt;height:16.8pt'
+      o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image057.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+     src="HelpFileSONG1.0_files/image058.gif" v:shapes="_x0000_i1085"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1085"
+       DrawAspect="Content" ObjectID="_1141742879">
+      </o:OLEObject>
+     </xml><![endif]-->&lt;1.0 means one unit increase in link length generates
+     less than one unit additional revenue; <sub><!--[if gte vml 1]><v:shape
+      id="_x0000_i1086" type="#_x0000_t75" style='width:13.8pt;height:16.8pt'
+      o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image057.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+     src="HelpFileSONG1.0_files/image058.gif" v:shapes="_x0000_i1086"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1086"
+       DrawAspect="Content" ObjectID="_1141742880">
+      </o:OLEObject>
+     </xml><![endif]-->=0 means change in link length will not affect revenue
+     made by the providers. </li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1057" type="#_x0000_t75"
+ style='width:15pt;height:18pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image055.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=20 height=24
+src="HelpFileSONG1.0_files/image056.gif" v:shapes="_x0000_i1057"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1057"
+  DrawAspect="Content" ObjectID="_1141742881">
+ </o:OLEObject>
+</xml><![endif]-->, Speed power in revenue model ***</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Default
+     value: 1.0</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Range:
+     Users define between 0~1.0, indicating economy or diseconomy of scale of
+     revenue regarding road speed provided for travelers.</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Interpretation:
+     <sub><!--[if gte vml 1]><v:shape id="_x0000_i1058" type="#_x0000_t75"
+      style='width:15pt;height:18pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image055.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=20 height=24
+     src="HelpFileSONG1.0_files/image056.gif" v:shapes="_x0000_i1058"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1058"
+       DrawAspect="Content" ObjectID="_1141742882">
+      </o:OLEObject>
+     </xml><![endif]-->=1.0 means one unit increase in speed (e.g. upgrade the
+     road section) generates on unit of additional revenue; if <sub><!--[if gte vml 1]><v:shape
+      id="_x0000_i1059" type="#_x0000_t75" style='width:15pt;height:18pt'
+      o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image055.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=20 height=24
+     src="HelpFileSONG1.0_files/image056.gif" v:shapes="_x0000_i1059"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1059"
+       DrawAspect="Content" ObjectID="_1141742883">
+      </o:OLEObject>
+     </xml><![endif]-->&lt;1.0, one unit increase in speed leads to less than
+     one unit rise in revenue; if <sub><!--[if gte vml 1]><v:shape id="_x0000_i1060"
+      type="#_x0000_t75" style='width:15pt;height:18pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image055.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=20 height=24
+     src="HelpFileSONG1.0_files/image056.gif" v:shapes="_x0000_i1060"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1060"
+       DrawAspect="Content" ObjectID="_1141742884">
+      </o:OLEObject>
+     </xml><![endif]-->=0, then speed change has no effects on revenue; if <sub><!--[if gte vml 1]><v:shape
+      id="_x0000_i1061" type="#_x0000_t75" style='width:15pt;height:18pt'
+      o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image055.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=20 height=24
+     src="HelpFileSONG1.0_files/image056.gif" v:shapes="_x0000_i1061"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1061"
+       DrawAspect="Content" ObjectID="_1141742885">
+      </o:OLEObject>
+     </xml><![endif]-->&gt;1.0, one unit increase in speed leads to more than
+     one unit increase in revenue. </li>
+</ul>
+
+<p class=MsoNormal style='margin-left:1.25in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>3. Parameters from cost
+model <o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>The model:<o:p></o:p></i></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>[<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1062" type="#_x0000_t75" style='width:130.2pt;height:19.2pt'
+ o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image069.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=174 height=26
+src="HelpFileSONG1.0_files/image070.gif" v:shapes="_x0000_i1062"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1062"
+  DrawAspect="Content" ObjectID="_1141742886">
+ </o:OLEObject>
+</xml><![endif]-->]: t</b>he model calculates<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1063" type="#_x0000_t75" style='width:15pt;height:19.2pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image071.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=20 height=26
+src="HelpFileSONG1.0_files/image072.gif" v:shapes="_x0000_i1063"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1063"
+  DrawAspect="Content" ObjectID="_1141742887">
+ </o:OLEObject>
+</xml><![endif]-->, the cost of maintaining the road at its present condition
+in time step t. This cost depicts the threshold cost of maintaining a link. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>Description of parameters<o:p></o:p></i></b></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1064" type="#_x0000_t75"
+ style='width:12pt;height:13.2pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image073.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=16 height=18
+src="HelpFileSONG1.0_files/image074.gif" v:shapes="_x0000_i1064"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1064"
+  DrawAspect="Content" ObjectID="_1141742888">
+ </o:OLEObject>
+</xml><![endif]-->, annual unit cost of maintenance for a link (<i
+style='mso-bidi-font-style:normal'>Not shown on the interface</i>)<o:p></o:p></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>default
+     value: 365</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>range:
+     fixed from user adjustment; or hide it</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Interpretation:
+     use <sub><!--[if gte vml 1]><v:shape id="_x0000_i1065" type="#_x0000_t75"
+      style='width:12pt;height:13.2pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image073.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=16 height=18
+     src="HelpFileSONG1.0_files/image074.gif" v:shapes="_x0000_i1065"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1065"
+       DrawAspect="Content" ObjectID="_1141742889">
+      </o:OLEObject>
+     </xml><![endif]--><span style='mso-spacerun:yes'>&nbsp;</span>to convert
+     daily link maintenance costs to annual costs.<span
+     style='mso-spacerun:yes'>&nbsp; </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:1.75in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1066" type="#_x0000_t75"
+ style='width:13.2pt;height:16.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image075.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+src="HelpFileSONG1.0_files/image076.gif" v:shapes="_x0000_i1066"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1066"
+  DrawAspect="Content" ObjectID="_1141742890">
+ </o:OLEObject>
+</xml><![endif]-->, coefficients for length, indicating (dis)economies of scale
+to road providers ***</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>default:
+     1.0</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Range:
+     User define to determine the (dis)economy of scale link maintenance costs
+     regarding link length. </li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Interpretation:
+     <sub><!--[if gte vml 1]><v:shape id="_x0000_i1087" type="#_x0000_t75"
+      style='width:13.2pt;height:16.8pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image075.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+     src="HelpFileSONG1.0_files/image076.gif" v:shapes="_x0000_i1087"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1087"
+       DrawAspect="Content" ObjectID="_1141742891">
+      </o:OLEObject>
+     </xml><![endif]-->represents the way how link maintenance costs change as
+     link length changes. If <sub><!--[if gte vml 1]><v:shape id="_x0000_i1088"
+      type="#_x0000_t75" style='width:13.2pt;height:16.8pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image077.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+     src="HelpFileSONG1.0_files/image076.gif" v:shapes="_x0000_i1088"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1088"
+       DrawAspect="Content" ObjectID="_1141742892">
+      </o:OLEObject>
+     </xml><![endif]-->=1.0, then link maintenance increase one percent with
+     one percent increase in link length; if <sub><!--[if gte vml 1]><v:shape
+      id="_x0000_i1067" type="#_x0000_t75" style='width:13.2pt;height:16.8pt'
+      o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image075.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+     src="HelpFileSONG1.0_files/image076.gif" v:shapes="_x0000_i1067"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1067"
+       DrawAspect="Content" ObjectID="_1141742894">
+      </o:OLEObject>
+     </xml><![endif]-->&gt;1.0, then link maintenance costs rise more than one percent
+     with respect to one percent increase in length, indicating a diseconomy of
+     scale; if <sub><!--[if gte vml 1]><v:shape id="_x0000_i1068" type="#_x0000_t75"
+      style='width:13.2pt;height:16.8pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image075.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+     src="HelpFileSONG1.0_files/image076.gif" v:shapes="_x0000_i1068"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1068"
+       DrawAspect="Content" ObjectID="_1141742895">
+      </o:OLEObject>
+     </xml><![endif]-->&lt;1.0, then link maintenance costs increase less than
+     one percent with one percent increase in link length, indicating a economy
+     of scale. </li>
+</ul>
+
+<p class=MsoNormal style='margin-left:1.75in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1069" type="#_x0000_t75"
+ style='width:13.8pt;height:16.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image078.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+src="HelpFileSONG1.0_files/image079.gif" v:shapes="_x0000_i1069"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1069"
+  DrawAspect="Content" ObjectID="_1141742896">
+ </o:OLEObject>
+</xml><![endif]-->, coefficient for flow ***</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level4 lfo10;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>default: 0.75</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level4 lfo10;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Range: user define to show (dis)economy of scale
+of link maintenance costs regarding to link flow. </p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level4 lfo10;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Interpretation: <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1070" type="#_x0000_t75" style='width:13.8pt;height:16.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image078.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+src="HelpFileSONG1.0_files/image079.gif" v:shapes="_x0000_i1070"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1070"
+  DrawAspect="Content" ObjectID="_1141742897">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>&nbsp;</span>represents the
+way how link maintenance costs vary according to link flow changes. If <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1071" type="#_x0000_t75" style='width:13.8pt;height:16.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image078.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+src="HelpFileSONG1.0_files/image079.gif" v:shapes="_x0000_i1071"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1071"
+  DrawAspect="Content" ObjectID="_1141742898">
+ </o:OLEObject>
+</xml><![endif]-->=1.0, link maintenance costs changes linearly with link flow
+change; if <sub><!--[if gte vml 1]><v:shape id="_x0000_i1072" type="#_x0000_t75"
+ style='width:13.8pt;height:16.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image078.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+src="HelpFileSONG1.0_files/image079.gif" v:shapes="_x0000_i1072"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1072"
+  DrawAspect="Content" ObjectID="_1141742899">
+ </o:OLEObject>
+</xml><![endif]-->&gt;1.0, link maintenance costs increase more than one percent
+with one percent increase in flow; if <sub><!--[if gte vml 1]><v:shape id="_x0000_i1073"
+ type="#_x0000_t75" style='width:13.8pt;height:16.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image078.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=22
+src="HelpFileSONG1.0_files/image079.gif" v:shapes="_x0000_i1073"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1073"
+  DrawAspect="Content" ObjectID="_1141742900">
+ </o:OLEObject>
+</xml><![endif]-->&lt;1.0, then one percent increase in flow will cause less
+than one percent increase in link maintenance costs, which shows an economy of
+scale. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1074" type="#_x0000_t75"
+ style='width:13.8pt;height:18pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image080.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=24
+src="HelpFileSONG1.0_files/image081.gif" v:shapes="_x0000_i1074"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1074"
+  DrawAspect="Content" ObjectID="_1141742901">
+ </o:OLEObject>
+</xml><![endif]-->, coefficient for speed ***</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l14 level4 lfo12;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>default:0.75</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l14 level4 lfo12;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Range: user define to show (dis)economy of scale
+of link maintenance costs regarding to link speed.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l14 level4 lfo12;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Interpretation: <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1075" type="#_x0000_t75" style='width:13.8pt;height:18pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image082.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=24
+src="HelpFileSONG1.0_files/image081.gif" v:shapes="_x0000_i1075"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1075"
+  DrawAspect="Content" ObjectID="_1141742902">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>&nbsp;</span>present the way
+how link maintenance costs changes with changes in link speed. As <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1076" type="#_x0000_t75" style='width:13.8pt;height:18pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image082.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=18 height=24
+src="HelpFileSONG1.0_files/image081.gif" v:shapes="_x0000_i1076"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1076"
+  DrawAspect="Content" ObjectID="_1141742903">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>&nbsp;</span>takes on values
+of 1.0 or larger than 1.0, or smaller than 1.0, one can see the relationships
+between link maintenance costs and speed to be either linear or demonstrating
+(dis)economy of scale. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>4. Parameters from investment
+model<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>The model<o:p></o:p></i></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>[<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1077" type="#_x0000_t75" style='width:78pt;height:36pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image083.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=104 height=48
+src="HelpFileSONG1.0_files/image084.gif" v:shapes="_x0000_i1077"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1077"
+  DrawAspect="Content" ObjectID="_1141742904">
+ </o:OLEObject>
+</xml><![endif]-->]: </b>Depending on the available revenue and maintenance
+costs this model changes the speed of every link at the end of each time step
+as show in the model equation. If the revenue generated by a link is
+insufficient to meet its maintenance requirements i.e. <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1078" type="#_x0000_t75" style='width:16.2pt;height:19.2pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image085.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=22 height=26
+src="HelpFileSONG1.0_files/image086.gif" v:shapes="_x0000_i1078"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1078"
+  DrawAspect="Content" ObjectID="_1141742905">
+ </o:OLEObject>
+</xml><![endif]-->&lt; <sub><!--[if gte vml 1]><v:shape id="_x0000_i1079"
+ type="#_x0000_t75" style='width:15pt;height:19.2pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image071.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=20 height=26
+src="HelpFileSONG1.0_files/image072.gif" v:shapes="_x0000_i1079"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1079"
+  DrawAspect="Content" ObjectID="_1141742906">
+ </o:OLEObject>
+</xml><![endif]-->, speed drops, otherwise, speed rises. The assumption of this
+model is that links use up all available revenue without any savings. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>Description of parameters<o:p></o:p></i></b></p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1089" type="#_x0000_t75"
+ style='width:12pt;height:16.2pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image087.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=16 height=22
+src="HelpFileSONG1.0_files/image088.gif" v:shapes="_x0000_i1089"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1089"
+  DrawAspect="Content" ObjectID="_1141742907">
+ </o:OLEObject>
+</xml><![endif]-->, speed improvement coefficient ***</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Default
+     value: 1.0</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Range:
+     0~1</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo1;tab-stops:list .5in'>Interpretation:
+     <sub><!--[if gte vml 1]><v:shape id="_x0000_i1080" type="#_x0000_t75"
+      style='width:12pt;height:16.2pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image087.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=16 height=22
+     src="HelpFileSONG1.0_files/image088.gif" v:shapes="_x0000_i1080"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1080"
+       DrawAspect="Content" ObjectID="_1141742908">
+      </o:OLEObject>
+     </xml><![endif]-->represents how speed at one time period changes
+     depending on the previous period’s link performance (in this case,
+     revenue-maintenance costs ratio<sub><!--[if gte vml 1]><v:shape id="_x0000_i1081"
+      type="#_x0000_t75" style='width:19.2pt;height:36pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image089.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=26 height=48
+     src="HelpFileSONG1.0_files/image090.gif" v:shapes="_x0000_i1081"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1081"
+       DrawAspect="Content" ObjectID="_1141742909">
+      </o:OLEObject>
+     </xml><![endif]-->.<span style='mso-spacerun:yes'>&nbsp; </span>If <sub><!--[if gte vml 1]><v:shape
+      id="_x0000_i1082" type="#_x0000_t75" style='width:12pt;height:16.2pt'
+      o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image087.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=16 height=22
+     src="HelpFileSONG1.0_files/image088.gif" v:shapes="_x0000_i1082"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1082"
+       DrawAspect="Content" ObjectID="_1141742910">
+      </o:OLEObject>
+     </xml><![endif]-->=0, then there is no change to the speed of the link
+     from previous period; if <sub><!--[if gte vml 1]><v:shape id="_x0000_i1083"
+      type="#_x0000_t75" style='width:12pt;height:16.2pt' o:ole="">
+      <v:imagedata src="HelpFileSONG1.0_files/image087.wmz" o:title=""/>
+     </v:shape><![endif]--><![if !vml]><img border=0 width=16 height=22
+     src="HelpFileSONG1.0_files/image088.gif" v:shapes="_x0000_i1083"><![endif]></sub><!--[if gte mso 9]><xml>
+      <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1083"
+       DrawAspect="Content" ObjectID="_1141742911">
+      </o:OLEObject>
+     </xml><![endif]-->=1, then there is one percent change in speed
+     corresponding to one percent change in link performance</li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><a href="#_top">Top</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<p class=Heading1><a name=Statistics><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'><span style='mso-spacerun:yes'>&nbsp;</span>Statistics
+Outputs</span></b></a><o:p></o:p></p>
+
+<p class=Heading1>-----------</p>
+
+<p class=Heading1>The following Measurements of Effectiveness (MOEs) can be output
+from the simulator for analysis; and Figure 6 shows the MOEs output windows as
+users click the button “Statistics”:</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+</div>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='page-break-before:auto;mso-break-type:section-break'>
+</span>
+
+<div class=Section8>
+
+<p class=Heading1>Figure 6: MOEs output window</p>
+
+<p class=Heading1><!--[if gte vml 1]><v:shape id="_x0000_i1084" type="#_x0000_t75"
+ style='width:195pt;height:487.8pt' o:ole="">
+ <v:imagedata src="HelpFileSONG1.0_files/image020.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=260 height=650
+src="HelpFileSONG1.0_files/image021.gif" v:shapes="_x0000_i1084"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Photoshop.Image.7" ShapeID="_x0000_i1084"
+  DrawAspect="Content" ObjectID="_1141742912">
+  <o:WordFieldCodes>\s</o:WordFieldCodes>
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>1. Average speed</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>2. Average flow</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>3. Vehicle Kilometers Traveled (VKT) </p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>4. Vehicle Hours Traveled (VHT)</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>5. Total cost</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>6. Total revenue</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>7. Cumulative costs</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>8. Cumulative revenue</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>9. Improvement term</p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><a href="#_top">Top</a></p>
+
+<p class=Heading1><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='mso-special-character:line-break;page-break-before:always'>
+</span></b></div>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:auto;mso-break-type:section-break'>
+</span></b>
+
+<div class=Section9>
+
+<p class=Heading1><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'>User <a name=Instructions>Instructions </a><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><o:p></o:p></p>
+
+<p class=MsoNormal>-----------</p>
+
+<p class=MsoNormal>To run the simulation, the following steps can be taken: </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>1. Access the
+simulator<o:p></o:p></b></p>
+
+<p class=MsoNormal>Go to the Webpage: <a
+href="http://www.ce.umn.edu/~levinson/Dynamics.html">http://www.ce.umn.edu/~levinson/Dynamics.html</a>,
+the interface should appear with a set of variables on the left side and a
+blank area on the right hand side. <o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>2. Set the initial
+conditions<o:p></o:p></b></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>Choose a network type</i>:
+you can choose network of different sizes (options include 5x5~25x25 nodes grid
+networks); or you can choose a network with river crossing. After you select an
+initial network, there should be a graphical grid network appear on the right
+hand side of the interface. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>Choose an initial
+network speed distribution:</i> click scroll down box besides “speed
+distribution” and set initial speeds as either randomly distributed or
+uniformly distributed. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>Choose an initial land
+use distribution: </i>click scroll down box besides “land use distribution” and
+choose random, or uniform, or urban (bell-shaped) land use. <o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>3. Change parameters
+which imply different situations and alternatives <o:p></o:p></b></p>
+
+<p class=MsoNormal>Use scroll down buttons or adjust the scroll bars to change
+the values of your parameters of interests. The meaning, default values and
+range of parameters are described in the parameter section of this document. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>4. Run the simulation<o:p></o:p></b></p>
+
+<p class=MsoNormal>After you made all the changes to the parameters, click
+“evolve” on the lower right side of the interface to run the simulation. Status
+information should appear on the lower right hand side for you to check if the
+simulation process is finished. <o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>5. Extract results
+(graphical and batch outputs)<o:p></o:p></b></p>
+
+<p class=Heading1>After the simulation finishes running, you can get graphical
+representations of the resulting network form, as well as MOEs of the network
+system. </p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>Graphic results demonstrate the resulting network with
+different colors of links indicating different levels of link speed or link
+volume. To view graphic results, go to the scroll down box besides button “Evolve”,
+choose either “speed” or “volume”, and view network forms in different years of
+evolution by using the following buttons: “&lt;&lt;” (initial year), “&lt;”
+(the previous year), “&gt;” (the next year),<span
+style='mso-spacerun:yes'>&nbsp; </span>“&gt;&gt;” (the final year). <span
+style='mso-spacerun:yes'>&nbsp;</span></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1>To get MOEs, click “Statistics” button, and a separate window
+will be open with information you can use for quantitative analysis. </p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><b style='mso-bidi-font-weight:normal'>6. “Restore” function<o:p></o:p></b></p>
+
+<p class=Heading1>When rerunning the simulation you can use “Restore” button on
+the lower left hand side of the interface and restore the scroll bar values in
+the model to the default values. </p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<p class=Heading1><a href="#_top">Top</a></p>
+
+<p class=Heading1><o:p>&nbsp;</o:p></p>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<p class=Heading1><a name=FAQs><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'>FAQs</span></b><o:p></o:p></a></p>
+
+<span style='mso-bookmark:FAQs'></span>
+
+<p class=MsoNormal>-----------</p>
+
+<p class=MsoNormal>Q: What is the system requirement for running this
+simulation?</p>
+
+<p class=MsoNormal>A: The simulator should be run with Java 1.4.2, which can be
+downloaded for free from <a href="http://java.sun.com/j2se/1.4.2/download.html">http://java.sun.com/j2se/1.4.2/download.html</a>.
+<span style='mso-spacerun:yes'>&nbsp;</span>The program has been tested for
+windows XP, windows 2000; and for Mac OS 10.3, and OS 10.2.<span
+style='mso-spacerun:yes'>&nbsp; </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Q: Why the simulation interface doesn’t show up on my
+screen?</p>
+
+<p class=MsoNormal>A: You might open Internet Explore, go to “Tool”, then
+select “Internet Options”, and select “Advanced”, and scroll down until you see
+“Java (sun)”, check the box under it, restart your computer. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Q: Why does the simulator run slowly?</p>
+
+<p class=MsoNormal>A: Running speed of the simulation depends on a number of
+factors: network sizes (the larger the size of network, the longer it takes to
+run the simulation), the memory of the computer used to run the program, and the
+CPU of the computer. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Q: How do I save the graphic of the resulting network?</p>
+
+<p class=MsoNormal>A: Hold “Fn” button on your keyboard <span style='font-family:
+Wingdings;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Wingdings'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Wingdings'>à</span></span> click “Print Screen”
+button <span style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'><span style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>
+press “Ctrl + C” <span style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'><span style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>
+open an MS Word file <span style='font-family:Wingdings;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;
+mso-symbol-font-family:Wingdings'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'>à</span></span> press “Ctrl + V”. <span
+style='mso-spacerun:yes'>&nbsp;</span>In Mac, use the “Grab” function in “Utilities”.
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Q: Can I have more than one network open at a time?</p>
+
+<p class=MsoNormal>A: Yes you can, with opening a new Internet Explore window
+and accessing the simulator in the same page. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Q: Are there any other similar simulation I can play with? <span
+style='mso-spacerun:yes'>&nbsp;</span></p>
+
+<p class=MsoNormal>A:<span style='mso-spacerun:yes'>&nbsp; </span><a
+href="http://education.mit.edu/starlogo/">http://education.mit.edu/starlogo/</a>
+</p>
+
+<p class=MsoNormal><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><a
+href="http://ccl.northwestern.edu/netlogo/models/TrafficBasic">http://ccl.northwestern.edu/netlogo/models/TrafficBasic</a>
+<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Q: How can I get the source code for this applet?</p>
+
+<p class=MsoNormal>A: the source code can be found at: <a
+href="http://www.ce.umn.edu/~levinson/TrivialApplet.java">http://www.ce.umn.edu/~levinson/TrivialApplet.java</a>
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><a href="#_top">Top</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+<div style='mso-element:footnote-list'><![if !supportFootnotes]><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<![endif]>
+
+<div style='mso-element:footnote' id=ftn1>
+
+<p class=MsoFootnoteText><a style='mso-footnote-id:ftn1' href="#_ftnref1"
+name="_ftn1" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
+footnote'><![if !supportFootnotes]><span class=MsoFootnoteReference><span
+style='font-size:10.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>[1]</span></span><![endif]></span></span></a>
+If equilibrium cannot be reached after 20 iterations, it is very likely that
+the program cannot converge, and SONG 1.0 would then halt at its 20<sup>th</sup>
+iteration.<span style='mso-spacerun:yes'>&nbsp; </span></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
